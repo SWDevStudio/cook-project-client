@@ -1,54 +1,34 @@
 <template>
-  <a-form
-      :model="formState"
-      name="basic"
-      :label-col="{ span: 8 }"
-      :wrapper-col="{ span: 16 }"
-      autocomplete="off"
-      @finish="onFinish"
-      @finishFailed="onFinishFailed"
-  >
-    <a-form-item
-        label="Username"
-        name="username"
-        :rules="[{ required: true, message: 'Please input your username!' }]"
-    >
-      <a-input v-model:value="formState.username" />
-    </a-form-item>
+  <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
+    <div class="text-center mb-5">
+      <img src="images/blocks/logos/hyper.svg" alt="Image" height="50" class="mb-3">
+      <div class="text-900 text-3xl font-medium mb-3">Welcome Back</div>
+      <span class="text-600 font-medium line-height-3">Don't have an account?</span>
+      <a class="font-medium no-underline ml-2 text-blue-500 cursor-pointer">Create today!</a>
+    </div>
 
-    <a-form-item
-        label="Password"
-        name="password"
-        :rules="[{ required: true, message: 'Please input your password!' }]"
-    >
-      <a-input-password v-model:value="formState.password" />
-    </a-form-item>
+    <div>
+      <label for="email1" class="block text-900 font-medium mb-2">Email</label>
+      <InputText id="email1" type="text" class="w-full mb-3" />
 
-    <a-form-item name="remember" :wrapper-col="{ offset: 8, span: 16 }">
-      <a-checkbox v-model:checked="formState.remember">Remember me</a-checkbox>
-    </a-form-item>
+      <label for="password1" class="block text-900 font-medium mb-2">Password</label>
+      <InputText id="password1" type="password" class="w-full mb-3" />
 
-    <a-form-item :wrapper-col="{ offset: 8, span: 16 }">
-      <a-button type="primary" html-type="submit">Submit</a-button>
-    </a-form-item>
-  </a-form>
+      <div class="flex align-items-center justify-content-between mb-6">
+        <div class="flex align-items-center">
+          <Checkbox id="rememberme1" :binary="true"  class="mr-2"></Checkbox>
+          <label for="rememberme1">Remember me</label>
+        </div>
+        <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Forgot password?</a>
+      </div>
+
+      <Button label="Sign In" icon="pi pi-user" class="w-full"></Button>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import {reactive} from "vue";
-
-const formState = reactive({
-  username: '',
-  password: '',
-  remember: true,
-});
-const onFinish = (values: string) => {
-  console.log('Success:', values);
-};
-const onFinishFailed = (errorInfo: string) => {
-  console.log('Failed:', errorInfo);
-};
-
 </script>
 
 <style scoped>

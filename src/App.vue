@@ -2,9 +2,7 @@
 </script>
 
 <template>
-  <div class="app">
-    <RouterView />
-  </div>
+  <RouterView />
 </template>
 
 <style scoped lang="sass">

@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/dark-theme": "^2.0.2",
     "@types/node": "^18.11.10",
-    "ant-design-vue": "^3.2.15",
+    "primeflex": "^3.3.0",
+    "primevue": "^3",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
     "vue": "^3.2.41",

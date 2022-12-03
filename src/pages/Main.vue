@@ -4,7 +4,12 @@ import LoginForm from "../components/LoginForm.vue";
 
 <template>
   <div class="main">
-    <LoginForm />
+    <div class="ant-row">
+      <div class="ant">
+        <LoginForm />
+      </div>
+    </div>
+
   </div>
 </template>
 
