@@ -1,11 +1,6 @@
 <template>
   <div class="flex-row">
     <div>
-      <Menu
-          :model="items"
-      >
-
-      </Menu>
     </div>
     <div>
       <RouterView />
@@ -14,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import Menu from "primevue/menu";
 
 const items = [
   {
