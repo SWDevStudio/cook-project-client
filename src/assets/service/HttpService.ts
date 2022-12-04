@@ -1,12 +1,19 @@
 import axios, {AxiosInstance, AxiosRequestConfig, AxiosResponse} from "axios";
+import AuthService from "@/entities/auth/AuthService";
 
-export default class HttpModule {
-    static instance = new HttpModule()
-    axios: AxiosInstance
+export default class HttpService {
+    static instance = new HttpService()
+
+    baseURL: string = 'http://localhost:1337'
+
+    private axios: AxiosInstance
 
     constructor() {
         this.axios = axios.create({
-            baseURL: 'http://localhost:1337/api'
+            baseURL: this.baseURL + '/api',
+            headers: {
+                'Authorization': window.localStorage.getItem('jwt')
+            }
         })
     }
 
@@ -27,6 +34,7 @@ export default class HttpModule {
     }
 
     updateHeader(name: string, value: string) {
+        console.log(name,value)
         this.axios.defaults.headers.common[name] = value
     }
 }

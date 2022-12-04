@@ -3,7 +3,7 @@
 
 <script setup lang="ts">
 import {AuthController} from "../entities/auth/AuthController";
-import {reactive, ref, Ref} from "vue";
+import {onMounted, reactive, ref, Ref} from "vue";
 import {AuthDto} from "../entities/auth/dto/AuthDto";
 import router from "../router";
 import {AxiosError} from "axios";
@@ -12,7 +12,7 @@ const authController = AuthController.instance
 
 const form: AuthDto = reactive({
   email: 'mytest@test.ru',
-  password: '1234567891'
+  password: '123456789'
 })
 
 let errorMessage: Ref<string> = ref('')
@@ -26,6 +26,11 @@ const onSubmit = () =>
         .then(() => router.push('./personal-area'))
         .catch(viewServerError)
 
+onMounted(() => {
+  setTimeout(() => {
+    onSubmit()
+  }, 0)
+})
 </script>
 
 <style scoped>
