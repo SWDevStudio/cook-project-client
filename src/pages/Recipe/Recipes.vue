@@ -8,7 +8,6 @@
         </v-col>
       </v-row>
     </v-card-text>
-
   </v-card>
 </template>
 
@@ -17,6 +16,7 @@ import RecipeCard from "@/components/RecipeCard.vue";
 import {ref, Ref} from "vue";
 import {RecipeDto} from "@/entities/recipe/dto/RecipeDto";
 import RecipeService from "@/entities/recipe/RecipeService";
+import FormRecipe from "@/components/FormRecipe.vue";
 
 let recipes: Ref<RecipeDto[]> = ref([])
 

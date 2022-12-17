@@ -13,6 +13,9 @@ export default class HttpService {
             baseURL: this.baseURL + '/api',
             headers: {
                 'Authorization': window.localStorage.getItem('jwt')
+            },
+            params: {
+                populate: '*'
             }
         })
     }

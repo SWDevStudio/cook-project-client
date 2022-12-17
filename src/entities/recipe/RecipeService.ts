@@ -11,5 +11,7 @@ export default class RecipeService {
     }
 
     async load(id: number) {
+        const {data}: {data: {data: RecipeDto}} = await this.$http.get('/recipes/' + id)
+        return data.data
     }
 }

@@ -16,7 +16,8 @@ const routes: VueRouter.RouteRecordRaw[] = [
         component: Default,
         children: [
             { path: 'personal-area', component: () => import('../pages/PersonalArea.vue') },
-            { path: 'recipe', component: () => import('../pages/Recipe.vue') }
+            { path: 'recipe', component: () => import('../pages/Recipe/Recipes.vue') },
+            { path: 'recipe/:id', component: () => import('../pages/Recipe/Recipe.vue') }
         ]
     }
 ]
