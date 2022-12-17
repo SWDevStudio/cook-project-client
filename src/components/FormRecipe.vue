@@ -7,7 +7,7 @@
 <script setup lang="ts">
 
 const props = defineProps<{
-  defaultForm: object
+  defaultForm?: object
 }>()
 
 

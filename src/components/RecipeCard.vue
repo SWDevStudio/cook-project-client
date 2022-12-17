@@ -18,6 +18,7 @@
       <v-btn
           color="primary"
           rounded
+          :to="`/recipe/${recipe.id}`"
       >
         Подробнее
       </v-btn>
