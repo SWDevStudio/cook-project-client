@@ -1,5 +1,5 @@
 import HttpService from "@/assets/service/HttpService";
-import {RecipeDto} from "@/entities/recipe/dto/RecipeDto";
+import {RecipeCreateDto, RecipeDto} from "@/entities/recipe/dto/RecipeDto";
 
 export default class RecipeService {
     static instance: RecipeService = new RecipeService()
@@ -13,5 +13,10 @@ export default class RecipeService {
     async load(id: number) {
         const {data}: {data: {data: RecipeDto}} = await this.$http.get('/recipes/' + id)
         return data.data
+    }
+
+    async create(recipe: RecipeCreateDto) {
+        const {data} = await this.$http.get('/recipes')
+
     }
 }

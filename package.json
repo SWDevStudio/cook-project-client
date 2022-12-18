@@ -16,6 +16,7 @@
     "axios": "^1.2.0",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
+    "strapi-plugin-populate-deep": "^1.1.2",
     "vite-plugin-vuetify": "^1.0.0",
     "vue": "^3.2.41",
     "vue-router": "4",

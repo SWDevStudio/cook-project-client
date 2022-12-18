@@ -66,7 +66,6 @@
           <v-card-text>
             <FormRecipe />
           </v-card-text>
-
         </v-card>
       </v-dialog>
     </v-card-actions>

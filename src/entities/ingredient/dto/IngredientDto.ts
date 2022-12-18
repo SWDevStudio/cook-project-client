@@ -5,8 +5,11 @@ export interface IngredientDto {
     id: number,
     attributes: {
         name: string,
-        weightType: WeightIngredient,
-        weight: number,
-        image: StrapiImage
     }
+}
+
+export interface IngredientCreateDto {
+    name: string,
+    weightType: WeightIngredient,
+    weight: number
 }

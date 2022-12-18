@@ -1,5 +1,5 @@
 <template>
-  <v-card elevation="2" height="100%">
+  <v-card elevation="2" height="100%"  class="overflow-auto" >
     <v-card-title>Список ваших рецептов</v-card-title>
     <v-card-text>
       <v-row>
